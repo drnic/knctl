@@ -46,6 +46,7 @@ func TestNewInstallCmd_OkLongFlagNames(t *testing.T) {
 	cmd.Execute([]string{
 		"--node-ports",
 		"--exclude-monitoring",
+		"--exclude-build-templates",
 		"--version-check=false",
 	})
 	cmd.ExpectReachesExecution()

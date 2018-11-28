@@ -44,7 +44,7 @@ func NewUninstallCmd(o *UninstallOptions, flagsFactory cmdcore.FlagsFactory) *co
 	cmd := &cobra.Command{
 		Use:   "uninstall",
 		Short: "Uninstall Knative and Istio",
-		Long: `Uninstall Knative and Istio. 
+		Long: `Uninstall Knative and Istio.
 
 Requires 'kubectl' command installed on a the system.`,
 		Annotations: map[string]string{

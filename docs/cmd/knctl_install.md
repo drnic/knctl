@@ -15,10 +15,11 @@ knctl install [flags]
 ### Options
 
 ```
-  -m, --exclude-monitoring   Exclude installation of monitoring components
-  -h, --help                 help for install
-  -p, --node-ports           Use service type NodePorts instead of type LoadBalancer
-      --version-check        Check minimum Kubernetes API server version (default true)
+      --exclude-build-templates   Exclude installation of build templates
+  -m, --exclude-monitoring        Exclude installation of monitoring components
+  -h, --help                      help for install
+  -p, --node-ports                Use service type NodePorts instead of type LoadBalancer
+      --version-check             Check minimum Kubernetes API server version (default true)
 ```
 
 ### Options inherited from parent commands

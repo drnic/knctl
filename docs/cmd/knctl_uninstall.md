@@ -4,7 +4,7 @@ Uninstall Knative and Istio
 
 ### Synopsis
 
-Uninstall Knative and Istio. 
+Uninstall Knative and Istio.
 
 Requires 'kubectl' command installed on a the system.
 

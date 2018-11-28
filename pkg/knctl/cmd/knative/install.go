@@ -58,9 +58,10 @@ type InstallOptions struct {
 	ui          ui.UI
 	depsFactory cmdcore.DepsFactory
 
-	NodePorts         bool
-	ExcludeMonitoring bool
-	VersionCheck      bool
+	NodePorts             bool
+	ExcludeBuildTemplates bool
+	ExcludeMonitoring     bool
+	VersionCheck          bool
 
 	kubeconfigFlags *cmdcore.KubeconfigFlags
 }
@@ -82,6 +83,7 @@ Requires 'kubectl' command installed on a the system.`,
 		RunE: func(_ *cobra.Command, _ []string) error { return o.Run() },
 	}
 	cmd.Flags().BoolVarP(&o.NodePorts, "node-ports", "p", false, "Use service type NodePorts instead of type LoadBalancer")
+	cmd.Flags().BoolVarP(&o.ExcludeBuildTemplates, "exclude-build-templates", "", false, "Exclude installation of build templates")
 	cmd.Flags().BoolVarP(&o.ExcludeMonitoring, "exclude-monitoring", "m", false, "Exclude installation of monitoring components")
 	cmd.Flags().BoolVar(&o.VersionCheck, "version-check", true, "Check minimum Kubernetes API server version")
 	return cmd
